@@ -458,3 +458,67 @@ switch ($caso) {
 /**
  * ! estructuras repetitivas
  */
+
+
+echo "<h4>Estructuras repetitivas</h4>"; 
+
+
+/**
+* * while
+*/
+
+echo "</br>";
+
+$a = 0;
+
+while ($a <= 10) {
+
+    echo $a.", ";
+    $a += 1;
+}
+
+
+
+
+/**
+* * Do while
+* ? Sin importar la condicion siempre ejecuta primero una vez lo que esta en el do
+*/
+
+echo "</br>";
+
+$a = 0;
+
+do{
+
+    echo $a.", ";
+    $a += 1;
+}
+while ($a <= 10);
+
+
+/**
+* * for
+*/
+
+echo "</br>";
+
+for ($i=0; $i < 20 ; $i++) { 
+
+    echo $i.", ";
+}
+
+
+/**
+* * forEach
+*/
+
+echo "</br>";
+
+$numeros = [1 => "uno", 2 => "dos", 3 => "tres", 4 => "cuatro", 5 => "cinco"];
+
+foreach($numeros as $key => $value){
+
+    echo $key." --> ".$value;
+    echo "</br>";
+}
