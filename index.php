@@ -101,6 +101,7 @@ $nuevo_resultado_map = array_map("cuadrado", $array);
 print_r($nuevo_resultado_map);
 
 
+
 /**
  * *array_reduce(): Reduce un array a un solo valor aplicando una función de devolución de llamada.
  * ? Recibe el primer parametro el array y de segundo la funcion al aplicar
@@ -134,6 +135,8 @@ print_r(array_key_exists("uno", $array_asociado) ? "si existe valor" : "no exist
  * *in_array(): Comprueba si un valor existe en un array.
  * ?recibe como primer parametro lo que se va buscar si existe y de segundo el array
 */
+
+
 
 echo "<br/>";
 print_r(in_array(100, $array_asociado) ? "si existe valor" : "no existe valor");
