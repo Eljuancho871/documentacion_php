@@ -396,7 +396,6 @@ var_dump($persona);
 /**
  * * krsort
  * ? ordena en orden primero por la Z por las llaves
- * ?  
 */
 
 echo "<br/>";
@@ -405,3 +404,57 @@ $persona = ["nombre" => "juan", "edad", 17, "sexo" => "M"];
 
 krsort($persona);
 var_dump($persona);
+
+
+/**
+ * ! Condicionales
+ */
+
+
+ echo "<h4>Condicionales</h4>"; 
+
+
+ /**
+ * * if, else, else if
+*/
+
+echo "<br/>";
+
+if(5 > 10){
+
+    echo "5 es mayor a 10";
+}else if(5 > 6){
+
+    echo "5 es mayor a 6";
+}else{
+
+    echo "5 no es mayor a 10 y tampoco a 6";
+}
+
+
+/**
+ * * switch
+*/
+
+$caso = "3";
+
+echo "</br>";
+
+switch ($caso) {
+    case '3':
+        echo "el valor es 3";
+        break;
+
+    case '4':
+        echo "el valor es 4";
+        break;
+    
+    default:
+        echo "el valor no es 3 ni 4";
+        break;
+}
+
+
+/**
+ * ! estructuras repetitivas
+ */
