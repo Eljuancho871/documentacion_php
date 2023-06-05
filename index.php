@@ -522,3 +522,36 @@ foreach($numeros as $key => $value){
     echo $key." --> ".$value;
     echo "</br>";
 }
+
+
+/**
+ * ! funciones definidas por uno
+ */
+
+ echo "<h4>Funciones</h4>"; 
+
+ /**
+* * funciones
+*/
+
+echo "</br>";
+
+function sumar(int $n1, int $n2):void{
+
+    echo $n1 + $n2;
+}
+
+sumar(5, 5);
+
+ /**
+* * funciones que devuelven
+*/
+
+echo "</br>";
+
+function sumarr(int $n1, int $n2): int {
+
+    return $n1 + $n2;
+}
+
+echo sumarr(5, 5) + 10;
