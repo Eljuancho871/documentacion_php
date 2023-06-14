@@ -555,3 +555,132 @@ function sumarr(int $n1, int $n2): int {
 }
 
 echo sumarr(5, 5) + 10;
+
+
+echo "<h4>Json decode y encode</h4>";
+
+/**
+ * * json encode
+ * ? pide un array asociado para devolver un json
+ */
+
+
+$usuario = array("name" => "Juan", "age" => 17);
+
+echo "<br/>";
+
+print_r(json_encode($usuario));
+
+
+
+/**
+ * * json decode
+ * ? pide un json para devolver un tipo aceptable por php
+ */
+
+
+ $usuario = '{"name": "Juan", "age": 17}';
+
+ echo "<br/>";
+ 
+ print_r(json_decode($usuario));
+
+
+/**
+ * ! orientado a objetos, POO
+ * ? clases
+ */
+
+
+class obj1 {
+
+    public function __construct(public string $name, public int $age){}
+
+    public function saludar(){
+
+        echo "hola soy ".$this -> name." tengo ".$this -> age." años";
+    }
+
+    private function secreto(){
+
+        echo "soy un metodo privado, no me podras llamar afuera de esta clase";
+    }
+
+    protected function protegido(){
+
+        echo "soy un metodo protegido, solo me podras llamar desde mis hijos y de mi mismo";
+    }
+
+    static public function estatico(){
+
+        echo "soy un metodo estatico me podras llamar sin la necesiadad de hacer una instancia de esta clase";
+    }
+}
+
+// instancia
+
+$instancia = new obj1("juan", 17);
+
+
+
+/**
+ * * herencia
+ * ? clases
+ */
+
+
+class obj2 extends obj1 {
+
+    public function __construct(public string $name, public int $age){
+
+        parent::__construct($name,$age);
+    }
+}
+
+
+/**
+ * * clasese abstractas
+ * ? permite crear contratos y a la vez definir metodos concretos
+ */
+
+
+
+ abstract class Persona {
+
+    abstract public function caminar();
+    
+    public function saludar(){
+
+        echo "hola";
+    }
+ }
+
+ class Estudiante extends Persona {
+
+    public function caminar(){
+
+        echo "caminando...";
+    }
+ }
+
+ $instancia = new Estudiante();
+ $instancia -> saludar();
+
+
+ /**
+ * * interfaces
+ * ? definen contrataos a las clases, una clase puede tener varios contratos
+ */
+
+
+ interface autoMovil {
+    public function llantas();
+ }
+
+ class ferrari implements autoMovil {
+
+    public function llantas(){
+
+        echo "Poner llantas";
+    }
+ }
